@@ -6,6 +6,8 @@ import com.seumanuel.store.model.OrderStatus;
 import com.seumanuel.store.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class OrderService {
 
@@ -24,12 +26,10 @@ public class OrderService {
     }
 
     public Order cancel(Order order) {
-        if(OrderStatus.NEW.equals(order.getStatus())){
-            order.setStatus(OrderStatus.CANCELLED);
-            return orderRepository.save(order);
+        if(!OrderStatus.NEW.equals(order.getStatus())){
+            throw new IllegalStateException("Can't cancel that order!");
         }
-
-        return null;
+        return orderRepository.save(order);
     }
 
     public Order confirmOrder(Order order) {
@@ -41,4 +41,9 @@ public class OrderService {
         order.setStatus(OrderStatus.DELIVERED);
         return orderRepository.save(order);
     }
+
+    public List<Order> findAllByName(String buyerName){
+        return orderRepository.findAllByName(buyerName);
+    }
+
 }
