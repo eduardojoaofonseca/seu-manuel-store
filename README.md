@@ -41,10 +41,10 @@ Considere que o sistema deve:
      - Consultar por parte do nome **ok**
      - Consultar por preços dos produtos(preços entre um min e um max)
  - Pedido:
-     - Criar um novo pedido
-     - Cancelar o pedido(lembrar da regra de negocio)
-     - Entregar o pedido
-     - Confirmar o pedido
+     - Criar um novo pedido **ok**
+     - Cancelar o pedido(lembrar da regra de negocio) **ok**
+     - Entregar o pedido **ok**
+     - Confirmar o pedido **ok**
  - A API deve usar dados no formato JSON para realizar as operações;
  - Os dados devem ser armazenados em um banco de dados;
  - É necessário escrever testes automáticos para os serviços;
