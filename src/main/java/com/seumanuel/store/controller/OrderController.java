@@ -39,14 +39,12 @@ public class OrderController {
 
     @GetMapping
     public Order confirmOrder(@RequestBody Order order) {
-        order.setStatus(OrderStatus.APPROVED);
-        return orderService.save(order);
+        return orderService.confirmOrder(order);
     }
 
     @GetMapping
     public Order deliverOrder(@RequestBody Order order) {
-        order.setStatus(OrderStatus.DELIVERED);
-        return orderService.save(order);
+        return orderService.deliverOrder(order);
     }
 
     @GetMapping()

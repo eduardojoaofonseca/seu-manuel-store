@@ -13,30 +13,44 @@ public class ProductService {
     private final ProductRepository repository;
 
     public ProductService(ProductRepository repository){
-
         this.repository = repository;
     }
 
-    public Product update(String id, Product product) {
+    public Product save(Product product) {
+        return repository.save(product);
+    }
 
+    public Product update(String id, Product product) {
         product.setId(id);
         return repository.save(product);
     }
 
-    public void deleteProduct (String id){
+    public void subtractStock(Product product, BigDecimal number){
+        product.setStock(product.getStock().subtract(number));
+        repository.save(product);
+    }
+    public void addStock(Product product, BigDecimal number){
+        product.setStock(product.getStock().add(number));
+        repository.save(product);
+    }
 
+    public void deleteProduct (String id){
         repository.deleteById(id);
     }
 
     public Product findById(String id) {
-
         return repository.findById(id).orElse(null);
     }
 
-    public List<Product> findAllByProcessorContaining(String name) {
-
+    public List<Product> findAllByNameContaining(String name) {
         return repository.findAllByNameContaining(name);
     }
+
+    public  List<Product> findAllByPriceBetween(BigDecimal min, BigDecimal max){
+        return repository.findAllByPriceBetween(min,max);
+    }
+
+}
 
 //    public  List<Product> findAllByPriceBetween(BigDecimal min, BigDecimal max){
 //
@@ -53,6 +67,3 @@ public class ProductService {
         *
         *
         * */
-    }
-
-}

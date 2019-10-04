@@ -39,7 +39,7 @@ Considere que o sistema deve:
      - Excluir **ok**
      - Consultar pelo codigo **ok**
      - Consultar por parte do nome **ok**
-     - Consultar por preços dos produtos(preços entre um min e um max)
+     - Consultar por preços dos produtos(preços entre um min e um max) **ok**
  - Pedido:
      - Criar um novo pedido **ok**
      - Cancelar o pedido(lembrar da regra de negocio) **ok**
