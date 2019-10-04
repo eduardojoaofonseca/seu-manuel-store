@@ -48,3 +48,5 @@ Considere que o sistema deve:
  - A API deve usar dados no formato JSON para realizar as operações;
  - Os dados devem ser armazenados em um banco de dados;
  - É necessário escrever testes automáticos para os serviços;
+ 
+ cenas
