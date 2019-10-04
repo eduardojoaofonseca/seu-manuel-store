@@ -1,4 +1,4 @@
-package com.academy.java.spring.dto;
+package com.seumanuel.store.dto;
 
 public class ErrorDTO {
 
