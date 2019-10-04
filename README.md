@@ -34,11 +34,11 @@ Considere que o sistema deve:
 #### Observações:
  - Desenvolva as APIs do Sistema
  - Produto:
-     - Cadastrar
-     - Atualizar
-     - Excluir
-     - Consultar pelo codigo
-     - Consultar por parte do nome
+     - Cadastrar **ok**
+     - Atualizar **ok**
+     - Excluir **ok**
+     - Consultar pelo codigo **ok**
+     - Consultar por parte do nome **ok**
      - Consultar por preços dos produtos(preços entre um min e um max)
  - Pedido:
      - Criar um novo pedido
